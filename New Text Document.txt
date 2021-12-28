@@ -1,0 +1,29 @@
+docker file>>>
+
+<><><><><><
+FROM openjdk:11
+EXPOSE 8081
+ADD target/springboot.jar.jar springboot.jar
+ENTRYPOINT ["java","-jar","/springboot.jar"]
+
+><><><><>
+docker build -t springboot.jar.jar .   (Command prompt) 
+><><><><>
+
+
+CONTAINER
+<><><><><><>
+docker login 
+docker tag springboot.jar.jar vvashista/springboot.jar.jar
+docker push vvashista/springboot.jar.jar 
+docker pull vvashista/springboot.jar.jar
+docker image ls 
+docker run -p 9090:8080 springboot.jar.jar
+docker run -p {hostport}:{containerport} vvashista/dockerdemo1.jar:latest
+docker container ls -a 
+docker container ls
+docker container rm <container name>
+docker container rm <container name> -f
+docker container run -d -p 8080:80 --name dockerdemo.jar dockerdemo.jar
+docker container ps
+ 
