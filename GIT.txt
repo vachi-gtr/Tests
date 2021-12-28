@@ -1,0 +1,9 @@
+GIT
+
+git init 
+git status
+git add 
+git commit 
+git push -u origin main 
+git checkout -b myfeature dev
+git branch 
