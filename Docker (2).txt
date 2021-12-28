@@ -1,0 +1,34 @@
+DOCKER
+
+docker 
+docker -v 
+docker run hello-world
+docker build -t spring-boot-docker.jar .
+
+docker image ls 
+docker run -p 9090:8080 spring-boot-docker.jar 
+ 
+<><><RUN IN LOCAL>WITH IP ADDRESS><><>
+
+docker search hello-world
+docker search --filter stars=3 ubuntu 
+docker search --filter stars=100 --filter is-automated=true ubuntu
+docker search --filter stars=100 --filter is-automated=true no-trunc ubuntu
+docker images java 
+docker pull java 
+docker images java:8
+docker ps -a 
+
+<><><><><><><><><><><><>
+docker save -o <exported_name>.tar <container-name>
+docker load -i <export_image_name>.tar
+docker version.
+docker version --format '{{.Server.Version}}'
+docker info
+docker stop <container-id>
+docker rm <container-id>
+docker kill <container-id>
+sudo docker run -i -t alpine /bin/bash
+docker inspect message-server
+docker stop message-server
+docker rm message-server
